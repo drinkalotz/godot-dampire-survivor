@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @export var MAX_SPEED = 40
+@export var DAMAGE = 50
 @onready var health_component: HealthComponent = $HealthComponent
 @onready var basic_enemy_area: Area2D = $BasicEnemyArea
 

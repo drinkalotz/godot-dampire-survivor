@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjlglsvxvp1xw"]
+
+[ext_resource type="Texture2D" uid="uid://nafdrs2dukbr" path="res://scenes/ability/spear/spear_ability/spear.png" id="1_8jvpt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5i3d1"]
+size = Vector2(12, 19)
+
+[node name="SpearAbility" type="Node2D"]
+rotation = 1.57079
+
+[node name="SpearSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_8jvpt")
+
+[node name="SpearArea" type="Area2D" parent="."]
+
+[node name="SpearCollision" type="CollisionShape2D" parent="SpearArea"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_5i3d1")
+
+[node name="SpearDestroyParticle" type="CPUParticles2D" parent="."]
+position = Vector2(0, -7)
+emitting = false
+amount = 50
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector2(0, 0)
+radial_accel_min = 30.0
+radial_accel_max = 50.0
+scale_amount_min = 0.5
